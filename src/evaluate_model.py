@@ -66,10 +66,7 @@ def evaluateModel():
 
     matrix = confusion_matrix(yTest, predictions, labels=labels)
 
-    display = ConfusionMatrixDisplay(
-        confusion_matrix=matrix,
-        display_labels=labels
-    )
+    display = ConfusionMatrixDisplay(confusion_matrix=matrix,display_labels=labels)
 
     fig, ax = plt.subplots(figsize=(12, 10))
     display.plot(ax=ax, xticks_rotation=45)
