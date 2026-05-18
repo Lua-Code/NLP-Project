@@ -61,10 +61,7 @@ def recommendMovies(predictedGenre, numberOfMovies=5):
     predictedGenreLower = predictedGenre.lower()
 
     filteredMovies = moviesDf[
-        moviesDf["genres"].apply(
-            lambda movieGenres: predictedGenreLower in str(movieGenres).lower()
-        )
-    ].copy()
+        moviesDf["genres"].apply(lambda movieGenres: predictedGenreLower in str(movieGenres).lower())].copy()
 
     filteredMovies = filteredMovies[filteredMovies["vote_count"] >= 100]
 
@@ -126,7 +123,10 @@ def recommendMoviesFromGenres(predictedGenres, numberOfMovies=5):
 
     filteredMovies["genre_score"] = filteredMovies["genres"].apply(calculateGenreScore)
 
-    recommendedMovies = filteredMovies.sort_values(by=["genre_score", "vote_average", "vote_count", "popularity"],ascending=[False, False, False, False]).head(numberOfMovies)
+    recommendedMovies = filteredMovies.sort_values(
+        by=["genre_score", "vote_average", "vote_count", "popularity"],
+        ascending=[False, False, False, False]
+        ).head(numberOfMovies)
 
     return recommendedMovies[
         ["title", "genres", "overview", "vote_average", "vote_count", "popularity"]

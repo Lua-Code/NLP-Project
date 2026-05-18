@@ -46,8 +46,18 @@ def evaluateModel():
 
     model, vectorizer, testDataFrame = loadFiles()
 
+    requiredColumns = ["moodText", "actualGenre"]
+
+    missingColumns = [
+        column for column in requiredColumns
+        if column not in testDataFrame.columns
+    ]
+
+    if missingColumns:
+        raise ValueError(f"Missing columns in test_data.csv: {missingColumns}")
+
     xTest = testDataFrame["moodText"].astype(str)
-    yTest = testDataFrame["trueGenre"].astype(str)
+    yTest = testDataFrame["actualGenre"].astype(str)
 
     xTestVectorized = vectorizer.transform(xTest)
     predictions = model.predict(xTestVectorized)

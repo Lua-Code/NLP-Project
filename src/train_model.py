@@ -4,7 +4,8 @@ from pathlib import Path
 
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.linear_model import LogisticRegression
+from sklearn.svm import LinearSVC
+from sklearn.calibration import CalibratedClassifierCV
 from sklearn.metrics import accuracy_score
 
 
@@ -16,7 +17,6 @@ datasetPath = processedDataPath / "cleaned_mood_genre_dataset.csv"
 modelPath = modelsPath / "mood_genre_model.pkl"
 vectorizerPath = modelsPath / "tfidf_vectorizer.pkl"
 testDataPath = resultsPath / "test_data.csv"
-
 
 
 def loadDataset():
@@ -37,37 +37,62 @@ def loadDataset():
 
     return dataFrame
 
+
 def trainModel():
     modelsPath.mkdir(parents=True, exist_ok=True)
     resultsPath.mkdir(parents=True, exist_ok=True)
-    
+
     dataFrame = loadDataset()
-    
+
     x = dataFrame["moodText"]
     y = dataFrame["genre"]
-    
-    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42,stratify=y)
-    
-    vectorizer = TfidfVectorizer(max_features=5000, ngram_range=(1, 2))
-    
-    xTrainVectorized = vectorizer.fit_transform(x_train)
-    yTrainVectorized = vectorizer.transform(y_train)
-    
-    model = LogisticRegression(max_iter=1000, class_weight="balanced", random_state=42)
-    
-    model.fit(xTrainVectorized, y_train)
-    
-    predictions = model.predict(vectorizer.transform(x_test))
-    accuracy = accuracy_score(y_test, predictions)
-    
+
+    xTrain, xTest, yTrain, yTest = train_test_split(
+        x,
+        y,
+        test_size=0.2,
+        random_state=42,
+        stratify=y
+    )
+
+    vectorizer = TfidfVectorizer(
+        max_features=8000,
+        ngram_range=(1, 3),
+        stop_words="english",
+        sublinear_tf=True
+    )
+
+    xTrainVectorized = vectorizer.fit_transform(xTrain)
+    xTestVectorized = vectorizer.transform(xTest)
+
+    baseModel = LinearSVC(
+        class_weight="balanced",
+        C=1.0,
+        max_iter=5000
+    )
+
+    model = CalibratedClassifierCV(
+        estimator=baseModel,
+        cv=3
+    )
+
+    model.fit(xTrainVectorized, yTrain)
+
+    predictions = model.predict(xTestVectorized)
+    accuracy = accuracy_score(yTest, predictions)
+
     joblib.dump(model, modelPath)
     joblib.dump(vectorizer, vectorizerPath)
-    
-    testDataFrame = pd.DataFrame({"moodText": x_test, "trueGenre": y_test, "predictedGenre": predictions})
-    
+
+    testDataFrame = pd.DataFrame({
+        "moodText": xTest,
+        "trueGenre": yTest,
+        "predictedGenre": predictions
+    })
+
     testDataFrame.to_csv(testDataPath, index=False)
-    
-    print("Model trained successfully.")
+
+    print("Linear SVM model trained successfully.")
     print(f"Accuracy: {accuracy:.4f}")
     print(f"Model saved to: {modelPath}")
     print(f"Vectorizer saved to: {vectorizerPath}")
@@ -76,6 +101,3 @@ def trainModel():
 
 if __name__ == "__main__":
     trainModel()
-    
-    
-     

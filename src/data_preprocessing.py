@@ -51,7 +51,7 @@ def preprocessMoodDataset():
     moodDf["moodText"] = moodDf["moodText"].apply(cleanText)
     moodDf["genre"] = moodDf["genre"].astype(str).str.strip()
 
-    moodDf = moodDf[moodDf["moodText"] != ""]
+    moodDf = moodDf[moodDf["moodText"] != ""] 
     moodDf = moodDf[moodDf["genre"] != ""]
 
     moodDf.to_csv(cleanedMoodDatasetPath, index=False)
@@ -96,7 +96,7 @@ def preprocessMoviesDataset():
     moviesDf["title"] = moviesDf["title"].astype(str).str.strip()
     moviesDf["overview"] = moviesDf["overview"].astype(str).str.strip()
 
-    moviesDf["popularity"] = pd.to_numeric(moviesDf["popularity"], errors="coerce").fillna(0)
+    moviesDf["popularity"] = pd.to_numeric(moviesDf["popularity"], errors="coerce").fillna(0) 
     moviesDf["vote_average"] = pd.to_numeric(moviesDf["vote_average"], errors="coerce").fillna(0)
     moviesDf["vote_count"] = pd.to_numeric(moviesDf["vote_count"], errors="coerce").fillna(0)
 

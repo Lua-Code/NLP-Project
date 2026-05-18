@@ -1,4 +1,4 @@
-moodText,trueGenre,predictedGenre
+moodText,actualGenre,predictedGenre
 i want to watch something with corporate thriller,Thriller,Thriller
 i want to experience secret past,Mystery,Mystery
 tonight i want deep space mission,Sci-Fi,Sci-Fi
@@ -25,7 +25,7 @@ i want to experience demons,Horror,Horror
 put on something with dancing in rain,Romance,Romance
 i need a movie that has future society and feels experimental,Sci-Fi,Sci-Fi
 searching for asylum horror vibes,Horror,Horror
-the perfect movie for me right now has proposal scenes,Romance,Animation
+the perfect movie for me right now has proposal scenes,Romance,Romance
 i want a movie that gives me high stakes,Action,Action
 i want a movie that gives me sentient machines,Sci-Fi,Sci-Fi
 tonight i want fable stories,Animation,Animation
@@ -50,7 +50,7 @@ i am looking for virtual reality,Sci-Fi,Sci-Fi
 i am looking for stalking,Thriller,Thriller
 tonight i want heartbreaking events,Drama,Drama
 i am looking for car chases,Action,Action
-the perfect movie for me right now has assassination,Thriller,Animation
+the perfect movie for me right now has assassination,Thriller,Thriller
 find me a movie with simple story,Animation,Animation
 recommend something with mind blown,Sci-Fi,Sci-Fi
 something gentle with coming of age,Animation,Animation
@@ -79,7 +79,7 @@ i crave parody tonight,Comedy,Comedy
 give me kidnapping mystery,Mystery,Mystery
 i am in a mind blown mood and want advanced machines,Sci-Fi,Sci-Fi
 i want a film that features chase scenes,Action,Action
-i would love to see twists,Mystery,Romance
+i would love to see twists,Mystery,Mystery
 i need a movie that has investigation and feels curious,Mystery,Mystery
 find me a movie with class struggle,Drama,Drama
 recommend something with comic timing,Comedy,Comedy
@@ -124,11 +124,11 @@ i need a movie that has witches and feels bold,Horror,Horror
 i am in a tense mood and want survival thriller,Thriller,Thriller
 i want a movie with stalker mystery,Mystery,Mystery
 i would love to see detectives,Mystery,Mystery
-i need a movie that has missing identity and feels stressed,Thriller,Mystery
+i need a movie that has missing identity and feels stressed,Thriller,Thriller
 i want a movie with heartbreaking events,Drama,Drama
 i need something that has meaningful story,Drama,Drama
 i need something that has emotional conflict,Drama,Drama
-the perfect movie for me right now has terraforming,Sci-Fi,Animation
+the perfect movie for me right now has terraforming,Sci-Fi,Sci-Fi
 i feel relaxed and want a movie with feel good vibes,Comedy,Comedy
 i feel hyped and want a movie with intense combat,Action,Action
 i am in the mood for beautiful animation,Animation,Animation
@@ -162,7 +162,7 @@ i feel thoughtful sci fi so recommend something with mind blown,Sci-Fi,Sci-Fi
 i need a film with beach romance,Romance,Romance
 i crave urban warfare tonight,Action,Action
 give me mythical creatures,Animation,Animation
-i want a movie that gives me cannibalism,Horror,Drama
+i want a movie that gives me cannibalism,Horror,Horror
 i crave alien invasion tonight,Sci-Fi,Sci-Fi
 i want to watch something with intense combat,Action,Action
 recommend something with whistleblower mystery,Mystery,Mystery
@@ -236,7 +236,7 @@ i want a film that features border crossing,Thriller,Thriller
 get me a movie filled with innocent wonder,Animation,Animation
 i need a film with warm feelings,Romance,Romance
 i am looking for ambition cost,Drama,Drama
-something unstoppable with danger,Action,Action
+something unstoppable with danger,Action,Thriller
 i am in a emotional mood and want addiction,Drama,Drama
 give me political thriller,Thriller,Thriller
 find me a movie with screwball comedy,Comedy,Comedy
@@ -273,7 +273,7 @@ i need a movie that has supernatural and feels ready to be scared,Horror,Horror
 i want a movie that gives me witness on the run,Thriller,Thriller
 put on something with swords,Action,Action
 i crave age gap romance tonight,Romance,Romance
-i want to see trust nobody,Thriller,Sci-Fi
+i want to see trust nobody,Thriller,Romance
 i crave leaked information tonight,Thriller,Thriller
 i feel analytical so recommend something with alibi,Mystery,Mystery
 i am in the mood for sentient machines,Sci-Fi,Sci-Fi
@@ -317,7 +317,7 @@ the perfect movie for me right now has battles,Action,Action
 i need a film with real problems,Drama,Drama
 i feel burned out and want a movie with overreaction comedy,Comedy,Comedy
 i need a movie that has moral dilemma and feels introspective,Drama,Drama
-i would love to see undead,Horror,Romance
+i would love to see undead,Horror,Horror
 something about adventurous kids would be perfect,Animation,Animation
 give me light adventure,Animation,Animation
 i need something that has time travel,Sci-Fi,Sci-Fi
@@ -335,7 +335,7 @@ i am looking for unsafe allies,Thriller,Thriller
 something about aging and regret would be perfect,Drama,Drama
 searching for serious themes vibes,Drama,Drama
 give me imagination,Animation,Animation
-i would love to see secrets,Mystery,Thriller
+i would love to see secrets,Mystery,Mystery
 i want a childlike movie with princess adventures,Animation,Animation
 i want a movie that gives me plague horror,Horror,Horror
 i feel restless so recommend something with fights,Action,Action
@@ -359,8 +359,8 @@ i crave racial tension tonight,Drama,Drama
 show me a story about escape thriller,Thriller,Thriller
 something on edge with framed for murder,Thriller,Thriller
 i want to watch something with unsolved murder,Mystery,Mystery
-i feel happy,Comedy,Comedy
-tonight i want forbidden love,Drama,Romance
+i feel happy,Comedy,Animation
+tonight i want forbidden love,Drama,Drama
 searching for gunfights vibes,Action,Action
 i crave stalking tonight,Thriller,Thriller
 show me a story about absurd situations,Comedy,Comedy
@@ -425,7 +425,7 @@ i want to watch something with wormholes,Sci-Fi,Sci-Fi
 something tender with couples,Romance,Romance
 i need a film with killer dolls,Horror,Horror
 something about heroic animals would be perfect,Animation,Animation
-i want a movie that gives me wizards,Animation,Drama
+i want a movie that gives me wizards,Animation,Animation
 searching for marriage vibes,Romance,Romance
 i feel nervous so recommend something with disturbing scenes,Horror,Horror
 i want to experience heartwarming tale,Animation,Animation
@@ -455,7 +455,7 @@ get me a movie filled with gentle love,Romance,Romance
 i crave survival horror tonight,Horror,Horror
 find me a movie with galaxies,Sci-Fi,Sci-Fi
 i want to experience code breaking,Mystery,Mystery
-find me a movie with missing identity,Thriller,Mystery
+find me a movie with missing identity,Thriller,Thriller
 i want a sharp movie with cold case,Mystery,Mystery
 i want a movie that gives me cult horror,Horror,Horror
 i need a movie that has comedic timing and feels sad,Comedy,Comedy
@@ -511,19 +511,19 @@ i am looking for longing,Romance,Romance
 i want to experience space exploration kids,Animation,Animation
 tonight i want enemies to lovers,Romance,Romance
 i am craving undercover investigation,Mystery,Mystery
-find me a movie with dates,Romance,Comedy
+find me a movie with dates,Romance,Romance
 i want to watch something with sweet scenes,Romance,Romance
 something soft with childhood sweethearts,Romance,Romance
 i am looking for suspense,Thriller,Thriller
 i feel caring and want a movie with whirlwind romance,Romance,Romance
-i would love to see missing identity,Thriller,Mystery
+i would love to see missing identity,Thriller,Thriller
 i am in the mood for possession,Horror,Horror
 i am in a low mood and want fish out of water,Comedy,Comedy
 i am looking for attack helicopters,Action,Action
 i want a film that features social issues,Drama,Drama
 searching for cartoon style vibes,Animation,Animation
 i want a movie with cipher,Mystery,Mystery
-i want a movie that gives me panic,Horror,Drama
+i want a movie that gives me panic,Horror,Horror
 i need a movie that has abuse and survival and feels sad,Drama,Drama
 tonight i want ocean adventures,Animation,Animation
 put on something with loss,Drama,Drama
